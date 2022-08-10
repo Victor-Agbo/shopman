@@ -1,0 +1,110 @@
+{% extends "layout.html" %}
+
+{% block title %}Shop Manager - Consumables{% endblock title %}
+
+{% block header %}<header class="in">{% endblock header %}
+
+  {% block con_class %}side-active{% endblock con_class %}
+  {% block main %}
+  <main class="in">
+    <div class="materialize-red-text container row">
+      <div class="col">
+        <h5 style="margin-top: 0px; padding-top: 30px; padding-bottom: 30px; text-decoration: underline;">Consumables
+        </h5>
+      </div>
+
+      <div class="col right"><button class="btn waves-effect waves-light materialize-red-text white" id="con_btn"
+          style="margin-right: 0px; margin-top: 30px;"><b>Add
+            C</b></button></div>
+    </div>
+
+    <div id="con_form" style="display:none;">
+      <form action="/consumables" method="post">
+        <div class="container section" style="border-style: groove; border-width: 2px;">
+
+          <div class="materialize-red-text container row">
+            <div class="col">
+              <b style="margin-top: 0px;">Add Consumable</b>
+            </div>
+
+            <div class="col right"><button class="btn waves-effect waves-light materialize-red-text white" id="con_cls"
+                style="margin-right: 0px;">Close</button></div>
+          </div>
+
+          <div class="row">
+            <div class="col s10 m10 l10  push-s1 push-m1 push-l1">
+              <div class="input-field">
+                <input class="validate" id="con_name" name="con_name" required type="text">
+                <label for="con_name">Consumable Name</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col s10 m5 l5  push-s1 push-m1 push-l1">
+              <div class="input-field">
+                <input class="validate" id="con_qty" name="con_qty" type="number">
+                <label for="con_qty">Quantity</label>
+
+              </div>
+            </div>
+
+            <div class="col s10 m5 l5 push-s1 push-m1 push-l1">
+              <div class="input-field">
+                <input class="validate" id="con_pri" name="con_pri" type="text">
+                <label for="con_pri">Price</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col s10 m10 l10  push-s1 push-m1 push-l1">
+              <div class="input-field">
+                <input class="validate" id="con_des" name="con_des" type="text">
+                <label for="con_des">Description</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="center">
+            <div class="section"><b class="red-text center">{{ error_message }}</b></div>
+            <button class="center btn waves-effect waves-light materialize-red" type="submit"><b>Add!</b></button>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div class="container section">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for con_det in con_dets %}
+          <tr>
+            <td>{{ con_det[2] }}</td>
+            <td>{{ con_det[3] }}</td>
+            <td>{{ con_det[4] }}</td>
+            <td>{{ con_det[5] }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+    <script>
+
+      $(document).ready(function () {
+        $("#con_btn").click(function () {
+          $("#con_form").show()
+        })
+        $("#con_cls").click(function () {
+          $("#con_form").hide()
+        })
+      });
+
+    </script>
+    {% endblock main %}

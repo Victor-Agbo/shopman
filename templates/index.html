@@ -1,0 +1,48 @@
+{% extends "layout.html" %}
+
+{% block title %}{{ biz_det[0][1] }} - Shop Manager{% endblock title %}
+
+{% block header %}<header class="in">{% endblock header %}
+  {% block main %}
+  <main class="in grey lighten-4">
+    <div class="materialize-red-text container">
+      <h5 style="margin-top: 0px; padding: 30px">Dashboard</h5>
+    </div>
+    <div class="center">
+      <div class="row">
+        <div class="col s10 m5 l5  push-s1 push-m1 push-l1">
+          <a href="/commodities"><button class="d-btn btn materialize-red-text white"><i
+                class="medium material-icons">shopping_basket</i>
+              Commodities</button></a>
+
+        </div>
+        <div class="col s10 m5 l5 push-s1 push-m1 push-l1"><a href="/consumables"><button
+              class="d-btn btn materialize-red-text white"><i class="medium material-icons">store</i>
+              Consumables</button></a>
+        </div>
+
+      </div>
+
+      <div class="row">
+        <div class="col s10 m5 l5  push-s1 push-m1 push-l1">
+          <a href="/tools"><button class="d-btn btn materialize-red-text white"><i
+                class="medium material-icons">build</i> Tools and
+              Assets</button></a>
+        </div>
+        <div class="col s10 m5 l5  push-s1 push-m1 push-l1">
+          <a href="/personnel"><button class="d-btn btn materialize-red-text white"><i
+                class="medium material-icons">person</i>
+              Personnel</button></a>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col s10 m10 l10  push-s1 push-m1 push-l1">
+          <button class="d-btn btn materialize-red-text white">
+            <h6><i class="medium material-icons">storage</i> View All</h5>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    {% endblock main %}

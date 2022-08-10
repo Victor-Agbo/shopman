@@ -1,0 +1,23 @@
+{% extends "layout.html" %}
+
+{% block title %}Shop Manager - Home{% endblock title %}
+
+
+{% block main %}
+<main style="background-image:url(/static/index.jpeg);">
+  <div class="materialize-red-text container">
+    <h5 style="margin-top: 0px; padding: 30px">{% block heading %}{% endblock heading %}</h5>
+  </div>
+  <div class="center">
+    <h2>Your Shop, managed...</h2>
+
+    <h3>In One Place.</h3>
+
+    <a href="/register"><button class="center btn-large waves-effect waves-light materialize-red" type="submit"><b>Sign
+          Up</b></button></a>
+
+    <a href="/login"><button class="center btn-large waves-effect waves-light materialize-red-text white"
+        style="border-color: #e51c23;" type="submit"><b>Login</b></button></a>
+  </div>
+
+  {% endblock main %}

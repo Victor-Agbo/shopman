@@ -1,0 +1,125 @@
+{% extends "layout.html" %}
+
+{% block title %}Shop Manager - Consumables{% endblock title %}
+
+{% block header %}<header class="in">{% endblock header %}
+
+  {% block all_class %}side-active{% endblock all_class %}
+  {% block main %}
+  <main class="in">
+
+    <div class="materialize-red-text container">
+      <h5 style="margin-top: 0px; padding-top: 30px; padding-bottom: 30px; text-decoration: underline;">
+        Commodities
+      </h5>
+    </div>
+
+    <div class="container section">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for com_det in com_dets %}
+          <tr>
+            <td>{{ com_det[2] }}</td>
+            <td>{{ com_det[3] }}</td>
+            <td>{{ com_det[4] }}</td>
+            <td>{{ com_det[5] }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="materialize-red-text container">
+      <h5 style="margin-top: 0px; padding-top: 30px; padding-bottom: 30px; text-decoration: underline;">
+        Consumables
+      </h5>
+    </div>
+
+    <div class="container section">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Quantity</th>
+            <th>Price</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for con_det in con_dets %}
+          <tr>
+            <td>{{ con_det[2] }}</td>
+            <td>{{ con_det[3] }}</td>
+            <td>{{ con_det[4] }}</td>
+            <td>{{ con_det[5] }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="materialize-red-text container">
+      <h5 style="margin-top: 0px; padding-top: 30px; padding-bottom: 30px; text-decoration: underline;">
+        Personnel
+      </h5>
+    </div>
+
+    <div class="container section">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Title</th>
+            <th>Phone</th>
+            <th>Address</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for per_det in per_dets %}
+          <tr>
+            <td>{{ per_det[2] }}</td>
+            <td>{{ per_det[3] }}</td>
+            <td>{{ per_det[4] }}</td>
+            <td>{{ per_det[5] }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </div>
+
+    <div class="materialize-red-text container">
+      <h5 style="margin-top: 0px; padding-top: 30px; padding-bottom: 30px; text-decoration: underline;">
+        Tools/Assets
+      </h5>
+    </div>
+
+    <div class="container section">
+      <table>
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Units</th>
+            <th>Value</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tbody>
+          {% for tls_det in tls_dets %}
+          <tr>
+            <td>{{ tls_det[2] }}</td>
+            <td>{{ tls_det[3] }}</td>
+            <td>{{ tls_det[4] }}</td>
+            <td>{{ tls_det[5] }}</td>
+          </tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      {% endblock main %}

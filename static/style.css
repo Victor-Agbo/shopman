@@ -1,0 +1,53 @@
+.d-btn {
+  border-radius: 4px;
+  border-width: 1px;
+  min-height: 20px;
+  line-height: 20px;
+  height: 200px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.cname {
+  margin-bottom: auto;
+  margin-top: auto;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  text-align: center;
+  width: 100%
+}
+
+main.in,
+header.in {
+  padding-left: 300px;
+}
+
+
+@media only screen and (max-width : 992px) {
+
+  main.in,
+  header.in {
+    padding-left: 0px;
+  }
+}
+
+.main-menu {
+  position: sticky;
+  right: 0px;
+  top: 0px;
+  z-index: 999;
+}
+
+.main-nav {
+  text-align: center;
+  background-color: #e51c23 !important;
+  color: white;
+  width: auto;
+  position: sticky;
+  top: 0px;
+  z-index: 999;
+}
+
+.side-active {
+  color: #e51c23 !important;
+}
